@@ -10,7 +10,7 @@ int main(void) {
 	int *arr = (int *)malloc(size * sizeof(int)); 
     arr = (int[]){1, 4, -1, 22, 3, 0};
 	
-	printf("\nElements befor sorting...\n");
+	printf("\nElements before sorting...\n");
 	for (int i = 0; i < size; i++) {
 		printf("%d ", *(arr + i));
 	}
@@ -32,14 +32,13 @@ int main(void) {
 
 void insertion_sort(int* a, int size)
 {
-	int i, j;
-
-	for (i = 1; i < size; i++) {
+	for (int i = 1; i < size; i++) {
+		int j = i - 1;
 		int temp = a[i];
-		for (j = i - 1; (j >= 0) && (a[j] > temp); j--) {
+		while ((j >= 0) && (a[j] > temp)) {
 			a[j + 1] = a[j];
+			j--;
 		}
-		
 		a[j + 1] = temp;	
 	}
 }
