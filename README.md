@@ -12,3 +12,4 @@ The following sorting algorithms are covered:
     9.  count_sort
     10. bin/bucket sort
     11. radix sort
+    12. shell sort
